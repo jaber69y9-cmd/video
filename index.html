@@ -1,1 +1,180 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaber IT Solution - Video Player</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#07152e,#102d59,#07152e);
+  color: white;
+  padding: 25px 15px;
+}
+
+.header {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 5px 25px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#1685ff,#1745ce);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.brand h2 {
+  font-size: 19px;
+}
+
+.brand p {
+  font-size: 11px;
+  color: #91baff;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  margin: 15px 0 25px;
+}
+
+.heading h1 {
+  font-size: clamp(24px,5vw,36px);
+  margin-bottom: 10px;
+}
+
+.heading p {
+  color: #b4c8e8;
+  font-size: 14px;
+}
+
+.player-box {
+  max-width: 550px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #3c68a7;
+  border-radius: 22px;
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 20px 70px rgba(0,0,0,.4);
+}
+
+video {
+  width: 100%;
+  height: min(78vh, 850px);
+  min-height: 420px;
+  display: block;
+  object-fit: contain;
+  background: #000;
+  border-radius: 15px;
+}
+
+.info {
+  padding: 23px 10px;
+}
+
+.info h3 {
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.info p {
+  color: #9db9df;
+  font-size: 13px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 35px;
+  color: #8caedc;
+  font-size: 13px;
+  padding: 20px;
+}
+
+.footer strong {
+  color: #60a5fa;
+}
+
+@media(max-width:600px) {
+  body { padding: 12px; }
+  .player-box { padding: 6px; }
+  video {
+    height: 75vh;
+    min-height: 350px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">JI</div>
+  <div class="brand">
+    <h2>Jaber IT Solution</h2>
+    <p>BUILD. LAUNCH. GROW.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="heading">
+    <h1>Premium Video Experience</h1>
+    <p>Enjoy your video in high quality</p>
+  </div>
+
+  <div class="player-box">
+
+    <video
+      id="videoPlayer"
+      controls
+      playsinline
+      preload="metadata"
+      poster="thumbnail.jpg">
+
+      <source src="videos/my-video.mp4" type="video/mp4">
+
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="info">
+      <h3>Welcome to Jaber IT Solution</h3>
+      <p>Premium Video Streaming Experience</p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  © 2026 <strong>Jaber IT Solution</strong>
+  <br><br>
+  All Rights Reserved.
+</footer>
+
+</body>
+</html>
+
